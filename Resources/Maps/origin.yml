@@ -93,9 +93,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Parallax
       parallax: OriginStation
     - type: Broadphase
@@ -10991,30 +10989,6 @@ entities:
     - type: Transform
       pos: 19.479496,-29.50317
       parent: 2
-- proto: ActionToggleInternals
-  entities:
-  - uid: 13
-    components:
-    - type: Transform
-      parent: 12
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 12
-  - uid: 15
-    components:
-    - type: Transform
-      parent: 14
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 14
-- proto: ActionToggleLight
-  entities:
-  - uid: 34089
-    components:
-    - type: Transform
-      parent: 34088
-    - type: InstantAction
-      container: 34088
 - proto: ADTVioletChair
   entities:
   - uid: 16
@@ -104847,20 +104821,6 @@ entities:
     - type: Transform
       pos: 2.4978046,0.6471896
       parent: 34087
-    - type: HandheldLight
-      toggleActionEntity: 34089
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 34089
-    - type: ActionsContainer
 - proto: Floodlight
   entities:
   - uid: 16528
@@ -157539,14 +157499,6 @@ entities:
     - type: Transform
       pos: -22.415361,-57.515236
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 13
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 13
   - uid: 23623
     components:
     - type: Transform
@@ -157842,14 +157794,6 @@ entities:
     - type: Transform
       pos: -22.561195,-57.3069
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
   - uid: 23674
     components:
     - type: Transform

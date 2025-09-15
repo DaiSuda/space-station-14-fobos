@@ -105,9 +105,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
     - type: Parallax
@@ -16975,167 +16973,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ActionToggleBlock
-  entities:
-  - uid: 22
-    components:
-    - type: Transform
-      parent: 21
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 21
-  - uid: 24
-    components:
-    - type: Transform
-      parent: 23
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 23
-  - uid: 26
-    components:
-    - type: Transform
-      parent: 25
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 25
-  - uid: 28
-    components:
-    - type: Transform
-      parent: 27
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 27
-  - uid: 30
-    components:
-    - type: Transform
-      parent: 29
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 29
-  - uid: 32
-    components:
-    - type: Transform
-      parent: 31
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 31
-- proto: ActionToggleInternals
-  entities:
-  - uid: 34
-    components:
-    - type: Transform
-      parent: 33
-    - type: InstantAction
-      container: 33
-  - uid: 38
-    components:
-    - type: Transform
-      parent: 37
-    - type: InstantAction
-      container: 37
-  - uid: 42
-    components:
-    - type: Transform
-      parent: 41
-    - type: InstantAction
-      container: 41
-  - uid: 46
-    components:
-    - type: Transform
-      parent: 45
-    - type: InstantAction
-      container: 45
-  - uid: 50
-    components:
-    - type: Transform
-      parent: 49
-    - type: InstantAction
-      container: 49
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 35
-    components:
-    - type: Transform
-      parent: 33
-    - type: InstantAction
-      container: 33
-  - uid: 39
-    components:
-    - type: Transform
-      parent: 37
-    - type: InstantAction
-      container: 37
-  - uid: 43
-    components:
-    - type: Transform
-      parent: 41
-    - type: InstantAction
-      container: 41
-  - uid: 47
-    components:
-    - type: Transform
-      parent: 45
-    - type: InstantAction
-      container: 45
-  - uid: 51
-    components:
-    - type: Transform
-      parent: 49
-    - type: InstantAction
-      container: 49
-- proto: ActionToggleLight
-  entities:
-  - uid: 12
-    components:
-    - type: Transform
-      parent: 9
-    - type: InstantAction
-      container: 9
-  - uid: 13
-    components:
-    - type: Transform
-      parent: 9
-    - type: InstantAction
-      container: 9
-      attachedEntity: 9
-  - uid: 53
-    components:
-    - type: Transform
-      parent: 52
-    - type: InstantAction
-      container: 52
-  - uid: 55
-    components:
-    - type: Transform
-      parent: 54
-    - type: InstantAction
-      container: 54
-  - uid: 57
-    components:
-    - type: Transform
-      parent: 56
-    - type: InstantAction
-      container: 56
-  - uid: 59
-    components:
-    - type: Transform
-      parent: 58
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 58
-  - uid: 61
-    components:
-    - type: Transform
-      parent: 60
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 60
-  - uid: 37163
-    components:
-    - type: Transform
-      parent: 37162
-    - type: InstantAction
-      container: 37162
 - proto: ADTBlackSofaLeftSide
   entities:
   - uid: 62
@@ -26449,27 +26286,8 @@ entities:
       parent: 2
     - type: Foldable
       folded: False
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 10
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 12
-          - 13
-    - type: HandheldLight
-      selfToggleActionEntity: 13
-      toggleActionEntity: 12
     - type: PointLight
       enabled: False
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 13
 - proto: BalloonSyn
   entities:
   - uid: 1272
@@ -28706,13 +28524,6 @@ entities:
     components:
     - type: Transform
       pos: 40.428177,-33.30904
-      parent: 2
-- proto: Bloodpack10Lingering
-  entities:
-  - uid: 1619
-    components:
-    - type: Transform
-      pos: -55.47472,30.570892
       parent: 2
 - proto: BodyBagFolded
   entities:
@@ -119378,7 +119189,6 @@ entities:
       - 16934
       - 196
     - type: Firelock
-      emergencyCloseCooldown: 56507.4101612
     - type: Physics
       canCollide: True
     - type: Airtight
@@ -120013,20 +119823,6 @@ entities:
     - type: Transform
       pos: -46.616955,-20.452642
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 55
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 55
-    - type: ActionsContainer
   - uid: 17377
     components:
     - type: Transform
@@ -120253,20 +120049,6 @@ entities:
     - type: Transform
       pos: 2.4978046,0.6471896
       parent: 37161
-    - type: HandheldLight
-      toggleActionEntity: 37163
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 37163
-    - type: ActionsContainer
 - proto: FlippoSyndicateLighter
   entities:
   - uid: 1800
@@ -169813,17 +169595,6 @@ entities:
     - type: Transform
       pos: -6.494111,9.815808
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 34
-    - type: Jetpack
-      toggleActionEntity: 35
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 35
-          - 34
 - proto: JetpackMiniFilled
   entities:
   - uid: 24059
@@ -169854,17 +169625,6 @@ entities:
       parent: 36
     - type: Physics
       canCollide: False
-    - type: GasTank
-      toggleActionEntity: 38
-    - type: Jetpack
-      toggleActionEntity: 39
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 39
-          - 38
     - type: InsideEntityStorage
   - uid: 41
     components:
@@ -169872,17 +169632,6 @@ entities:
       parent: 40
     - type: Physics
       canCollide: False
-    - type: GasTank
-      toggleActionEntity: 42
-    - type: Jetpack
-      toggleActionEntity: 43
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 43
-          - 42
     - type: InsideEntityStorage
   - uid: 45
     components:
@@ -169890,17 +169639,6 @@ entities:
       parent: 44
     - type: Physics
       canCollide: False
-    - type: GasTank
-      toggleActionEntity: 46
-    - type: Jetpack
-      toggleActionEntity: 47
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 47
-          - 46
     - type: InsideEntityStorage
   - uid: 49
     components:
@@ -169908,17 +169646,6 @@ entities:
       parent: 48
     - type: Physics
       canCollide: False
-    - type: GasTank
-      toggleActionEntity: 50
-    - type: Jetpack
-      toggleActionEntity: 51
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 51
-          - 50
     - type: InsideEntityStorage
   - uid: 24063
     components:
@@ -170174,22 +169901,8 @@ entities:
     - type: Transform
       pos: 6.272311,-27.206562
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 57
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 57
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
   - uid: 24102
     components:
     - type: Transform
@@ -170278,22 +169991,8 @@ entities:
     - type: Transform
       pos: 10.490594,-15.471191
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 53
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 53
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
   - uid: 24115
     components:
     - type: Transform
@@ -170490,43 +170189,15 @@ entities:
     - type: Transform
       pos: -6.661128,40.339676
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 59
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 59
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
   - uid: 60
     components:
     - type: Transform
       pos: -13.395503,40.402176
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 61
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 61
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
 - proto: LandMineExplosive
   entities:
   - uid: 24134
@@ -196393,27 +196064,11 @@ entities:
     - type: Transform
       pos: -0.6787076,41.619873
       parent: 2
-    - type: Blocking
-      blockingToggleActionEntity: 22
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 22
   - uid: 23
     components:
     - type: Transform
       pos: -0.26898527,41.626816
       parent: 2
-    - type: Blocking
-      blockingToggleActionEntity: 24
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 24
 - proto: RiotLaserShield
   entities:
   - uid: 25
@@ -196421,27 +196076,11 @@ entities:
     - type: Transform
       pos: 1.322895,41.619514
       parent: 2
-    - type: Blocking
-      blockingToggleActionEntity: 26
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 26
   - uid: 27
     components:
     - type: Transform
       pos: 1.666645,41.6091
       parent: 2
-    - type: Blocking
-      blockingToggleActionEntity: 28
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 28
 - proto: RiotShield
   entities:
   - uid: 29
@@ -196449,27 +196088,11 @@ entities:
     - type: Transform
       pos: 0.6546259,41.626816
       parent: 2
-    - type: Blocking
-      blockingToggleActionEntity: 30
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 30
   - uid: 31
     components:
     - type: Transform
       pos: 0.25184774,41.619873
       parent: 2
-    - type: Blocking
-      blockingToggleActionEntity: 32
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 32
   - uid: 27678
     components:
     - type: Transform

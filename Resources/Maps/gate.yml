@@ -125,9 +125,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
     - type: Parallax
@@ -16022,43 +16020,6 @@ entities:
     - type: Transform
       pos: 0.4563446,-2.5673122
       parent: 34433
-- proto: ActionToggleInternals
-  entities:
-  - uid: 11
-    components:
-    - type: Transform
-      parent: 10
-    - type: InstantAction
-      container: 10
-  - uid: 14
-    components:
-    - type: Transform
-      parent: 13
-    - type: InstantAction
-      container: 13
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 12
-    components:
-    - type: Transform
-      parent: 10
-    - type: InstantAction
-      container: 10
-  - uid: 15
-    components:
-    - type: Transform
-      parent: 13
-    - type: InstantAction
-      container: 13
-- proto: ActionToggleLight
-  entities:
-  - uid: 17
-    components:
-    - type: Transform
-      parent: 16
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 16
 - proto: ADTClothingUniformAbibasBlackSuit
   entities:
   - uid: 18
@@ -50629,13 +50590,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -60.42194,164.46962
-      parent: 2
-- proto: CableApcStackLingering10
-  entities:
-  - uid: 6189
-    components:
-    - type: Transform
-      pos: -72.927055,180.1337
       parent: 2
 - proto: CableHV
   entities:
@@ -145001,17 +144955,6 @@ entities:
     - type: Transform
       pos: -101.70569,49.460007
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 11
-    - type: Jetpack
-      toggleActionEntity: 12
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 12
-          - 11
   - uid: 21199
     components:
     - type: Transform
@@ -145041,17 +144984,6 @@ entities:
     - type: Transform
       pos: -39.5489,-15.375725
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 14
-    - type: Jetpack
-      toggleActionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
-          - 14
   - uid: 21203
     components:
     - type: Transform
@@ -145351,22 +145283,8 @@ entities:
     - type: Transform
       pos: -26.55832,101.51269
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 17
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 17
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
   - uid: 21254
     components:
     - type: Transform
@@ -170911,24 +170829,6 @@ entities:
     - type: Transform
       pos: 3.5,-0.5
       parent: 34225
-- proto: StationAiBrain
-  entities:
-  - uid: 25434
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -17.642565,182.4048
-      parent: 2
-    - type: MindContainer
-    - type: MobMover
-    - type: MovementSpeedModifier
-    - type: Emoting
-    missingComponents:
-    - ActionGrant
-    - UserInterface
-    - IntrinsicRadioReceiver
-    - IntrinsicRadioTransmitter
-    - ActiveRadio
 - proto: StationAiUploadCircuitboard
   entities:
   - uid: 25435
